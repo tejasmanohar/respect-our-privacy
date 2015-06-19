@@ -6,7 +6,12 @@ class Phone < ActiveRecord::Base
   private
 
   def call
-    
+    @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+    @call = @client.calls.create(
+      from: ENV['TWILIO_NUMBER'],
+      to: self.number,
+      url: "#{ENV['domain']}/call-handler"
+    )
   end
 
 end

@@ -18,7 +18,14 @@ class PhonesController < ApplicationController
       @phone.increment(:requests_count)
     end
 
-    # @phone.call
+    @phone.call
+  end
+
+  def voice
+    message = Twilio::TwiML::Response.new do |m|
+      m.Play 'http://linode.rabasa.com/cantina.mp3'
+    end
+    render_twiml message
   end
 
 end
