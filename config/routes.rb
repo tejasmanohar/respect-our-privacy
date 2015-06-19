@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   root :to => 'phones#new'
-  get '/emails' => 'emails#new'
+
+  # phones
+  post 'phones/create' => 'phones#create'
 end
