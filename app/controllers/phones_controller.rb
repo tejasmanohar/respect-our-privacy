@@ -13,6 +13,9 @@ class PhonesController < ApplicationController
 
     if @user.nil?
       @user = User.new(:number => number)
+      @user.save
+    else
+      @user.increment(:requests_count)
     end
   end
 
