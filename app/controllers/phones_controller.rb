@@ -8,8 +8,8 @@ class PhonesController < ApplicationController
   end
 
   def create
-    number = params[:user][:number].tr('^0-9', '')
-    @phone = Phone.find_by_phone_number(number);
+    number = params[:phone][:number].tr('^0-9', '')
+    @phone = Phone.find_by_number(number);
 
     if @phone.nil?
       @phone = Phone.new(:number => number)
@@ -18,7 +18,7 @@ class PhonesController < ApplicationController
       @phone.increment(:requests_count)
     end
 
-    @phone.call
+    # @phone.call
   end
 
 end
