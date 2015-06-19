@@ -8,7 +8,7 @@ class Phone < ActiveRecord::Base
     @call = @client.calls.create(
       from: ENV['TWILIO_NUMBER'],
       to: self.number,
-      url: "#{ENV['domain']}/phones/voice"
+      url: "#{ENV['DOMAIN']}/phones/voice"
     )
   end
 

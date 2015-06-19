@@ -1,5 +1,9 @@
 class PhonesController < ApplicationController
 
+  include Webhookable
+
+  after_filter :set_header, :only => :voice
+
   def new
     @phone = Phone.new
     respond_to do |format|
@@ -19,6 +23,10 @@ class PhonesController < ApplicationController
     end
 
     @phone.call
+
+    respond_to do |format|
+      format.html
+    end
   end
 
   def voice
