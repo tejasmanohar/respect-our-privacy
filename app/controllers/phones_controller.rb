@@ -9,14 +9,16 @@ class PhonesController < ApplicationController
 
   def create
     number = params[:user][:number].tr('^0-9', '')
-    @user = User.find_by_phone_number(number);
+    @phone = Phone.find_by_phone_number(number);
 
-    if @user.nil?
-      @user = User.new(:number => number)
-      @user.save
+    if @phone.nil?
+      @phone = Phone.new(:number => number)
+      @phone.save
     else
-      @user.increment(:requests_count)
+      @phone.increment(:requests_count)
     end
+
+    @phone.call
   end
 
 end
