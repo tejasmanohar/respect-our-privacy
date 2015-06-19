@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   # phones
   post 'phones/create' => 'phones#create'
+  get 'phones/voice' => 'phones#voice'
 end
