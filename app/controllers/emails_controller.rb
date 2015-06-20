@@ -14,7 +14,7 @@ class EmailsController < ApplicationController
       :to => 'me@tejas.io',
       :from => 'team@respectourprivacy.com',
       :subject => 'iCANN - Respect Our Privacy',
-      :body => "Dear ICANN –\nRegarding the proposed rules governing companies that provide WHOIS privacy services (as set forth in the Privacy & Policy Services Accreditation Issues Policy document):\nI urge you to respect internet users’ rights to privacy and due process.\n-Everyone deserves the right to privacy.\n-No one’s personal information should be revealed without a court order, regardless of whether the request comes from a private individual or law enforcement agency.\nPrivate information should be kept private. Thank you.\n-- #{params[:name]}",
+      :body => params[:body],
       :via => :smtp,
       :via_options => {
         :address        => 'smtp.sendgrid.net',
