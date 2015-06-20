@@ -16,7 +16,7 @@ class EmailsController < ApplicationController
       :body => params[:body],
       :via => :smtp,
       :via_options => {
-        :address        => 'smtp.sendgrid.net',
+        :address        => ENV['SMTP_ADDRESS'],
         :port           => ENV['SMTP_PORT'],
         :user_name      => ENV['SMTP_USER'],
         :password       => ENV['SMTP_PASS'],
