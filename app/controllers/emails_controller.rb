@@ -25,7 +25,7 @@ class EmailsController < ApplicationController
         :domain         => "respectourprivacy.com"
       }
     })
-    redirect_to '/'
+    redirect_to root_path, notice: "Your email sent successfully."
   end
 
 end

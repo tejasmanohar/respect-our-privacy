@@ -20,7 +20,7 @@ class PhonesController < ApplicationController
       url: "#{ENV['DOMAIN']}/phones/voice"
     )
 
-    redirect_to '/'
+    redirect_to root_path, notice: "You'll get a call from us shortly."
   end
 
   def voice

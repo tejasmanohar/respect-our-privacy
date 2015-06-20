@@ -228,3 +228,12 @@ input, textarea {
 	padding: 64px 0;
 	margin: 64px 0;
 }
+.notice {
+	padding: 24px;
+	background: #F5B914;
+	border-radius: 5px;
+	font-size: 14px;
+	margin-bottom: 24px;
+	color: #fff;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.24);
+}
