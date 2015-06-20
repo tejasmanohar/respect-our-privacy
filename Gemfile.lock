@@ -55,8 +55,6 @@ GEM
     dotenv-rails (2.0.2)
       dotenv (= 2.0.2)
       railties (~> 4.0)
-    email_validator (1.6.0)
-      activemodel
     erubis (2.7.0)
     execjs (2.5.2)
     globalid (0.3.5)
@@ -155,7 +153,6 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   dotenv-rails
-  email_validator
   jbuilder (~> 2.0)
   jquery-rails
   pg
