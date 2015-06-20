@@ -53,7 +53,7 @@ body {
 	font-family: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background: #E2E2E2;
 }
-input {
+input, textarea {
 	font-family: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .inner {
@@ -121,9 +121,18 @@ input {
 	text-decoration: underline;
 	cursor: pointer;
 }
-#header #call-to-action input[type=text] {
+#header #call-to-action input[type=text], #header #call-to-action input[type=email] {
 	background: #E2E2E2;
 	height: 56px;
+	width: 100%;
+	padding: 24px;
+	font-size: 16px;
+	color: rgba(0,0,0,0.64);
+	margin: 6px 0;
+}
+#header #call-to-action textarea {
+	background: #E2E2E2;
+	height: 128px;
 	width: 100%;
 	padding: 24px;
 	font-size: 16px;
