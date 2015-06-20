@@ -9,9 +9,8 @@ class EmailsController < ApplicationController
 
   def create
     Pony.mail({
-#      :to => 'comments-ppsai-initial-05may15@icann.org',
-#      :cc => 'policy-staff@icann.org',
-      :to => 'me@tejas.io',
+      :to => 'comments-ppsai-initial-05may15@icann.org',
+      :cc => 'policy-staff@icann.org',
       :from => 'team@respectourprivacy.com',
       :subject => 'iCANN - Respect Our Privacy',
       :body => params[:body],
