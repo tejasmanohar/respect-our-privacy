@@ -14,19 +14,21 @@
 		</ul>
 
 		<div id="call-to-action" class="<% if params[:next] == 'email' %>email<% end %>">
-			<p>Contact ICANN today and demand your right to privacy and due process. Let them know you object to any release of info without a court order. There's no time to waste – ICANN policy discussions are already underway and the close date for comments is July 7, 2015.</p><br>
+			<h3>Contact ICANN today!</h2>
+			<p>Demand your right to privacy and due process. Let ICANN know that you object to any release of personal information without a court order. There's no time to waste – ICANN policy discussions are already underway and the close date for comments is July 7, 2015.</p><br>
 			<div class="call-form">
-				<p class="small">Enter your phone number here. We’ll call you and guide you through the process. Can't call? <span class="show-email">Send an email</span> instead.</p>
+				<p class="small large">Enter your phone number here. We'll call you and guide you through the process.</p>
 				<form method="post" action="/phones/create">
 					<div class="input single">
 						<input type="text" name="number" placeholder="555-555-555" pattern="\d{3}[\-\|\.\s]?\d{3}[\-\|\.\s]?\d{4}" required>
 						<input type="submit" value="Call ICANN">
 					</div>
 				</form>
+				<p class="small">Can't call? <span class="show-email">Send an email</span> instead.</p>
 			</div>
 
 			<div class="email-form">
-				<p class="small">Send a comment directly to ICANN, or <span class="show-call">make a phone call</span> instead.</p>
+				<p class="small large">Send a comment directly to ICANN:</p>
 				<form method="post" action="/emails/create" class="input">
 					<div class="input">
 						<input placeholder="Full Name" name="name" type="text" required>
@@ -45,6 +47,7 @@ Private information should be kept private. Thank you.</textarea>
 						<input type="submit" value="Email ICANN">
 					</div>
 				</form>
+				<p class="small"><span class="show-call">Make a phone call</span> instead.</p>
 			</div>
 		</div>
 	<div class="clear"></div>
@@ -60,7 +63,7 @@ Private information should be kept private. Thank you.</textarea>
 	<div id="content">
 		<div class="inner">
 			<h4>What's Happening</h4>
-			<p>Under new guidelines proposed by MarkMonitor and LegitScript, who represent the same industries that backed SOPA, domain holders with sites associated to "commercial activity" will no longer be able to protect their private information with WHOIS protection services. “Commercial activity” casts a wide net, which means that a vast number of domain holders will be affected. Your privacy provider could be forced to publish your contact data in WHOIS or even give it out to anyone who complains about your website, without due process. Why should a small business owner have to publicize her home address just to have a website?</p>
+			<p>Under new guidelines proposed by MarkMonitor and others who represent the same industries that backed SOPA, domain holders with sites associated to "commercial activity" will no longer be able to protect their private information with WHOIS protection services. "Commercial activity" casts a wide net, which means that a vast number of domain holders will be affected. Your privacy provider could be forced to publish your contact data in WHOIS or even give it out to anyone who complains about your website, without due process. Why should a small business owner have to publicize her home address just to have a website?</p>
 			<p>We think your privacy should be protected, regardless of whether your website is personal or commercial, and your confidential info should not be revealed without due process. If you agree, it’s time to tell ICANN.</p>
 			<p>To view the new proposed rules, visit: <a href="http://gnso.icann.org/en/issues/raa/ppsai-initial-05may15-en.pdf" target="_blank">Privacy & Proxy Services Accreditation Issues Policy</a>.</p>
 		</div>
