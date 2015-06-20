@@ -128,6 +128,9 @@ input, textarea {
 	text-decoration: underline;
 	cursor: pointer;
 }
+#header #call-to-action input[type="text"], #header #call-to-action input[type="email"] {
+	padding: 1em;
+}
 #header #call-to-action input[type=text], #header #call-to-action input[type=email] {
 	background: #E2E2E2;
 	height: 56px;
