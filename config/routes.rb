@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # phones
   post 'phones/create' => 'phones#create'
   post 'phones/voice' => 'phones#voice'
+
+  post 'emails/create' => 'emails#create'
 end

@@ -20,7 +20,7 @@ class PhonesController < ApplicationController
       url: "#{ENV['DOMAIN']}/phones/voice"
     )
 
-    redirect_to '/', alert: "Invalid email or password"
+    redirect_to '/'
   end
 
   def voice
