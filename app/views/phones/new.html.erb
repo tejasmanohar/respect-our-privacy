@@ -1,4 +1,0 @@
-<%= form_for @phone, :url => { :action => "create" } do |f| %>
-  <%= f.text_field :number, :placeholder => "555-555-555", :pattern => "(?:\\d{3}[ .-]?){2}\\d{4}", :required => true %>
-  <input type="submit" value="Call me!" />
-<% end %>

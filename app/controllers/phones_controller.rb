@@ -5,28 +5,22 @@ class PhonesController < ApplicationController
   after_filter :set_header, :only => :voice
 
   def new
-    @phone = Phone.new
     respond_to do |format|
       format.html
     end
   end
 
   def create
-    number = params[:phone][:number].tr('^0-9', '')
-    @phone = Phone.find_by_number(number);
+    number = params[:number].tr('^0-9', '')
 
-    if @phone.nil?
-      @phone = Phone.new(:number => number)
-      @phone.save
-    else
-      @phone.increment(:requests_count)
-    end
+    @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+    @call = @client.calls.create(
+      from: ENV['TWILIO_NUMBER'],
+      to: number,
+      url: "#{ENV['DOMAIN']}/phones/voice"
+    )
 
-    @phone.call
-
-    respond_to do |format|
-      format.html
-    end
+    redirect_to '/', alert: "Invalid email or password"
   end
 
   def voice

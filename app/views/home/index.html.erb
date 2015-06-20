@@ -13,24 +13,24 @@
 			<p>Contact ICANN today and demand your right to privacy and due process. Let them know you object to any release of info without a court order. There's no time to waste – ICANN policy discussions are already underway.</p><br>
 			<div class="call">
 				<p class="small">Enter your phone number below. You'll get a call from us. We'll tell you what to say and connect you to ICANN's LA office!</p>
-				<%= form_for @phone, :url => {:action=>"create", :controller=>"phones"} do |f| %>
-				<div class="input single">
-					<%= f.text_field :number, :placeholder => "555-555-555", :pattern => "(?:\\d{3}[ .-]?){2}\\d{4}", :required => true %>
+				<form method="post" action="/phones/create">
+					<input type="text" name="number" placeholder="555-555-555" pattern="\d{3}[\-\|\.|\s]*\d{3}[\-\|\.|\s]*\d{4}" required>
 					<input type="submit" value="Call ICANN">
-				</div>
-				<% end %>
+				</form>
 				<p class="small">Call ICANN: (310) 301-5800. Can't call? <span class="show-email">Send an email instead.</span></p>
 			</div>
 
 			<div class="email">
 				<p class="small">Send a comment directly to ICANN:</p>
-				<div class="input">
-					<input placeholder="Full Name" type="text">
-					<input placeholder="Email Address" type="text">
-					<input placeholder="Address (optional)" type="text">
-					<input placeholder="Zip Code (optional)" type="text">
-					<input type="submit" value="Email ICANN">
-				</div>
+				<form method="post" action="/emails/create">
+					<div class="input">
+						<input placeholder="Full Name" type="text" required>
+						<input placeholder="Email Address" type="email" required>
+						<input placeholder="Address (optional)" type="text">
+						<input placeholder="Zip Code (optional)" type="text">
+						<input type="submit" value="Email ICANN">
+					</div>
+				</form>
 				<p class="small"><span class="show-call">Make a phone call instead.</span></p>
 			</div>
 		</div>
