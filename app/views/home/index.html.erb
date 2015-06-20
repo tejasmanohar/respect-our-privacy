@@ -13,9 +13,9 @@
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
 		</ul>
 
-		<div id="call-to-action">
+		<div id="call-to-action" class="<% if params[:next] == 'email' %>email<% end %>">
 			<p>Contact ICANN today and demand your right to privacy and due process. Let them know you object to any release of info without a court order. There's no time to waste – ICANN policy discussions are already underway and the close date for comments is July 7, 2015.</p><br>
-			<div class="call">
+			<div class="call-form">
 				<p class="small">Enter your phone number here. We’ll call you and guide you through the process. Can't call? <span class="show-email">Send an email</span> instead.</p>
 				<form method="post" action="/phones/create">
 					<div class="input single">
@@ -25,7 +25,7 @@
 				</form>
 			</div>
 
-			<div class="email">
+			<div class="email-form">
 				<p class="small">Send a comment directly to ICANN, or <span class="show-call">make a phone call</span> instead.</p>
 				<form method="post" action="/emails/create" class="input">
 					<div class="input">
@@ -62,6 +62,7 @@ Private information should be kept private. Thank you.</textarea>
 			<h4>What's Happening</h4>
 			<p>Under new guidelines proposed by MarkMonitor and LegitScript, who represent the same industries that backed SOPA, domain holders with sites associated to "commercial activity" will no longer be able to protect their private information with WHOIS protection services. “Commercial activity” casts a wide net, which means that a vast number of domain holders will be affected. Your privacy provider could be forced to publish your contact data in WHOIS or even give it out to anyone who complains about your website, without due process. Why should a small business owner have to publicize her home address just to have a website?</p>
 			<p>We think your privacy should be protected, regardless of whether your website is personal or commercial, and your confidential info should not be revealed without due process. If you agree, it’s time to tell ICANN.</p>
+			<p>To view the new proposed rules, visit: <a href="http://gnso.icann.org/en/issues/raa/ppsai-initial-05may15-en.pdf" target="_blank">Privacy & Proxy Services Accreditation Issues Policy</a>.</p>
 		</div>
 
 		<div id="quotes">
@@ -77,8 +78,6 @@ Private information should be kept private. Thank you.</textarea>
 		</div>
 		</div>
 
-			<p class="small inner">* Who is ICANN? The Internet Corporation for Assigned Names and Numbers. They coordinate everything related to domains. Read more about their <a href="https://www.icann.org/get-started" target="_blank">mission and goals here</a>. 
-				<br><br>
-			To view the new proposed rules, visit: <a href="http://gnso.icann.org/en/issues/raa/ppsai-initial-05may15-en.pdf" target="_blank">Privacy & Proxy Services Accreditation Issues Policy</a>.</p>
+			<p class="small inner">* Who is ICANN? The Internet Corporation for Assigned Names and Numbers. They coordinate everything related to domains. Read more about their <a href="https://www.icann.org/get-started" target="_blank">mission and goals here</a>.</p>
 		</div>
 	</div>
