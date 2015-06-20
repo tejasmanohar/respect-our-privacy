@@ -94,7 +94,7 @@ input, textarea {
 	width: 100%;
 	background: #fff;
 	border-radius: 5px;
-	margin-top: 48px;
+	margin-top: 24px;
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.24);
 }
 #header #call-to-action .email {
@@ -115,8 +115,8 @@ input, textarea {
 	height: 56px;
 }
 #header #call-to-action .small {
-	font-size: 12px;
-	line-height: 16px;
+	font-size: 14px;
+	line-height: 18px;
 }
 #header #call-to-action span {
 	text-decoration: underline;
@@ -158,6 +158,15 @@ input, textarea {
 	position: absolute;
 	right: 0;
 	width: 136px;
+}
+#header .buttons {
+	margin: 24px 0 0;
+}
+#header .buttons li {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 6px;
+	height: 20px;
 }
 #bar {
 	width: 100%;
