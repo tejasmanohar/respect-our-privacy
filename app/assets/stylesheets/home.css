@@ -135,7 +135,6 @@ input, textarea {
 	background: #E2E2E2;
 	height: 56px;
 	width: 100%;
-	padding: 24px;
 	font-size: 16px;
 	color: rgba(0,0,0,0.64);
 	margin: 6px 0;
@@ -144,8 +143,8 @@ input, textarea {
 	background: #E2E2E2;
 	height: 128px;
 	width: 100%;
-	padding: 24px;
 	font-size: 16px;
+	padding: 24px;
 	color: rgba(0,0,0,0.64);
 	margin: 6px 0;
 }
