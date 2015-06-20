@@ -13,9 +13,9 @@
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
 		</ul>
 
-		<div id="call-to-action">
+		<div id="call-to-action" class="<% if params[:next] == 'email' %>email<% end %>">
 			<p>Contact ICANN today and demand your right to privacy and due process. Let them know you object to any release of info without a court order. There's no time to waste – ICANN policy discussions are already underway and the close date for comments is July 7, 2015.</p><br>
-			<div class="call">
+			<div class="call-form">
 				<p class="small">Enter your phone number here. We’ll call you and guide you through the process. Can't call? <span class="show-email">Send an email</span> instead.</p>
 				<form method="post" action="/phones/create">
 					<div class="input single">
@@ -25,7 +25,7 @@
 				</form>
 			</div>
 
-			<div class="email">
+			<div class="email-form">
 				<p class="small">Send a comment directly to ICANN, or <span class="show-call">make a phone call</span> instead.</p>
 				<form method="post" action="/emails/create" class="input">
 					<div class="input">

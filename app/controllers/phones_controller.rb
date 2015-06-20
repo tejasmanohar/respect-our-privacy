@@ -20,7 +20,7 @@ class PhonesController < ApplicationController
       url: "#{ENV['DOMAIN']}/phones/voice"
     )
 
-    redirect_to root_path, notice: "You'll get a call from us shortly."
+    redirect_to root_path(next: "email"), notice: "We'll call you shortly. We highly recommend sending your comments via the email form below as well."
   end
 
   def voice
