@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('fonts/museosans/museosans-300-webfont.eot');
+    src: url('fonts/museosans/museosans-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosans/museosans-300-webfont.woff2') format('woff2'),
+         url('fonts/museosans/museosans-300-webfont.woff') format('woff'),
+         url('fonts/museosans/museosans-300-webfont.ttf') format('truetype'),
+         url('fonts/museosans/museosans-300-webfont.svg#museo_sans300') format('svg');
+    font-weight: 300;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('fonts/museosans/museosans_500-webfont.eot');
+    src: url('fonts/museosans/museosans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosans/museosans_500-webfont.woff2') format('woff2'),
+         url('fonts/museosans/museosans_500-webfont.woff') format('woff'),
+         url('fonts/museosans/museosans_500-webfont.ttf') format('truetype'),
+         url('fonts/museosans/museosans_500-webfont.svg#museo_sans500') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('fonts/museosans/museosans_700-webfont.eot');
+    src: url('fonts/museosans/museosans_700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosans/museosans_700-webfont.woff2') format('woff2'),
+         url('fonts/museosans/museosans_700-webfont.woff') format('woff'),
+         url('fonts/museosans/museosans_700-webfont.ttf') format('truetype'),
+         url('fonts/museosans/museosans_700-webfont.svg#museo_sans700') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	outline: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body {
+	font-family: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #E2E2E2;
+}
+input {
+	font-family: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.inner {
+	width: 720px;
+	margin: 0 auto;
+}
+.clear {
+	clear: both;
+}
+#header {
+	width: 100%;
+	padding: 64px 0;
+	background: #DD5147;
+}
+#header h2 {
+	font-size: 36px;
+	color: #FFFFFF;
+	line-height: 43px;
+	font-weight: 700;
+	margin: 0 0 12px;
+}
+#header h3 {
+	font-size: 18px;
+	color: rgba(255,255,255,0.88);
+	line-height: 22px;
+	font-weight: 700;
+}
+#header p {
+	font-size: 16px;
+	color: rgba(255,255,255,0.72);
+	line-height: 24px;
+	width: 100%;
+	margin: 24px 0 0;
+}
+#header #call-to-action {
+	padding: 42px 48px;
+	width: 100%;
+	background: #fff;
+	border-radius: 5px;
+	margin-top: 48px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.24);
+}
+#header #call-to-action .email {
+	display: none;
+}
+#header #call-to-action p {
+	font-size: 16px;
+	color: rgba(0,0,0,0.48);
+	line-height: 24px;
+	width: 100%;
+	margin: 0;
+}
+#header #call-to-action .input {
+	margin: 24px 0;
+	position: relative;
+}
+#header #call-to-action .single  {
+	height: 56px;
+}
+#header #call-to-action .small {
+	font-size: 12px;
+	line-height: 16px;
+}
+#header #call-to-action span {
+	text-decoration: underline;
+	cursor: pointer;
+}
+#header #call-to-action input[type=text] {
+	background: #E2E2E2;
+	height: 56px;
+	width: 100%;
+	padding: 24px;
+	font-size: 16px;
+	color: rgba(0,0,0,0.64);
+	margin: 6px 0;
+}
+#header #call-to-action .single input[type=text] {
+	position: absolute;
+	left: 0;
+	margin: 0;
+}
+#header #call-to-action input[type=submit] {
+	background: #DD5147;
+	height: 56px;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: 700;
+	cursor: pointer;
+	width: 100%;
+}
+#header #call-to-action .single input[type=submit] {
+	position: absolute;
+	right: 0;
+	width: 136px;
+}
+#bar {
+	width: 100%;
+	background: #fff;
+	text-align: center;
+	padding: 36px 0;
+}
+#bar img {
+	margin: 0 32px;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#content {
+	margin: 64px 0;
+}
+#content h4 {
+	font-size: 20px;
+	color: rgba(0,0,0,0.88);
+	line-height: 24px;
+	font-weight: 700;
+	margin-top: 48px;
+}
+#content p {
+	font-size: 16px;
+	color: rgba(0,0,0,0.64);
+	line-height: 24px;
+	margin-top: 12px;
+}
+#content blockquote {
+	text-align: left;
+}
+#content blockquote:after {
+	content: " ";
+	width: 128px;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.36);
+	display: block;
+	margin: 48px auto;
+}
+#content blockquote:last-of-type:after {
+	background: none;
+	margin: 0;
+}
+#content blockquote p {
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0;
+	color: rgba(255, 255, 255, 0.88);
+}
+#content blockquote footer {
+	font-weight: 700;
+	color: #fff;
+	margin-top: 24px;
+}
+#content .small {
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.48);
+	line-height: 16px;
+}
+#content a {
+	color: rgba(0, 0, 0, 0.88);
+	text-decoration: underline;
+}
+#quotes {
+	background: #6D6E70;
+	padding: 64px 0;
+	margin: 64px 0;
+}

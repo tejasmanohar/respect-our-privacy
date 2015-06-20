@@ -1,0 +1,71 @@
+<div id="header">
+		<div class="inner">
+		<h2>Save Domain Privacy</h2>
+		<h3>Tell ICANN: "Respect our privacy. Don't expose WHOIS data."</h3>
+		<p>Did you know that your privacy rights are currently under threat? ICANN* – the overseers of the internet and domain names – are considering introducing a rule that would impact all netizens. If you care about your online privacy, this is a big deal.</p>
+
+		<!--<div class="fb-share-button" data-href="http://RespectOurPrivacy.com" data-layout="button"></div>
+
+		<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>-->
+
+		<div id="call-to-action">
+			<p>Contact ICANN today and demand your right to privacy and due process. Let them know you object to any release of info without a court order. There's no time to waste – ICANN policy discussions are already underway.</p><br>
+			<div class="call">
+				<p class="small">Enter your phone number below. You'll get a call from us. We'll tell you what to say and connect you to ICANN's LA office!</p>
+				<%= form_for @phone, :url => {:action=>"create", :controller=>"phones"} do |f| %>
+				<div class="input single">
+					<%= f.text_field :number, :placeholder => "555-555-555", :pattern => "(?:\\d{3}[ .-]?){2}\\d{4}", :required => true %>
+					<input type="submit" value="Call ICANN">
+				</div>
+				<% end %>
+				<p class="small">Call ICANN: (310) 301-5800. Can't call? <span class="show-email">Send an email instead.</span></p>
+			</div>
+
+			<div class="email">
+				<p class="small">Send a comment directly to ICANN:</p>
+				<div class="input">
+					<input placeholder="Full Name" type="text">
+					<input placeholder="Email Address" type="text">
+					<input placeholder="Address (optional)" type="text">
+					<input placeholder="Zip Code (optional)" type="text">
+					<input type="submit" value="Email ICANN">
+				</div>
+				<p class="small"><span class="show-call">Make a phone call instead.</span></p>
+			</div>
+		</div>
+	<div class="clear"></div>
+</div>
+	</div>
+
+	<div id="bar">
+		<a href="https://www.namecheap.com" target="_blank"><%= image_tag "namecheap.png" %></a>
+		<a href="https://www.eff.org" target="_blank"><%= image_tag "eff.png" %></a>
+		<a href="https://www.fightforthefuture.org" target="_blank"><%= image_tag "fftf.png" %></a>
+	</div>
+
+	<div id="content">
+		<div class="inner">
+			<h4>What's Happening</h4>
+			<p>Under new guidelines proposed by MarkMonitor and LegitScript, who represent mostly big corporate interests, ICANN would require companies that provide WHOIS data protection services to monitor client use of domains and websites. This means your privacy provider could be forced to publish your contact data in WHOIS or even give it out to anyone who complains about your website, without any type of due process.</p>
+			<p>We think your privacy should be protected, regardless of whether you’re an individual or a business entity, and your confidential info should not be revealed without due process. If you agree, it’s time to tell ICANN.</p>
+		</div>
+
+		<div id="quotes">
+		<div class="inner">
+			<blockquote>
+				<p>"No WHOIS privacy provider wants their service to be used to conceal illegal activity, and the vast majority of domain owners are not criminals. Using a WHOIS privacy service is no more suspicious than having an unlisted phone number. These new proposed rules would wreak havoc on our right to privacy online. ICANN is moving quickly, so we should too – contact them today and tell them to respect our privacy."</p>
+				<footer>Richard Kirkendall, Namecheap CEO & Founder</footer>
+			</blockquote>
+			<blockquote>
+				<p>"Domain name privacy protects us from spammers and enables freedom of speech. We've got to protect it."</p>
+				<footer>Holmes Wilson, Co-founder, Fight for the Future</footer>
+			</blockquote>
+		</div>
+		</div>
+
+			<p class="small inner">* Who is ICANN? The Internet Corporation for Assigned Names and Numbers. They coordinate everything related to domains. Read more about their <a href="https://www.icann.org/get-started" target="_blank">mission and goals here</a>. 
+				<br><br>
+			To view the new proposed rules, visit: <a href="http://gnso.icann.org/en/issues/raa/ppsai-initial-05may15-en.pdf" target="_blank">Privacy & Proxy Services Accreditation Issues Policy</a>.</p>
+		</div>
+	</div>

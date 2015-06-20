@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'phones#new'
+  root :to => 'home#index'
 
   # phones
   post 'phones/create' => 'phones#create'
