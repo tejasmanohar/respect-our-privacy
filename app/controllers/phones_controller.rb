@@ -25,7 +25,7 @@ class PhonesController < ApplicationController
 
   def voice
     message = Twilio::TwiML::Response.new do |m|
-      m.Play 'http://linode.rabasa.com/cantina.mp3'
+      m.Play root_url+'message.mp3'
       m.Dial '+13103015800'
     end
     render_twiml message
