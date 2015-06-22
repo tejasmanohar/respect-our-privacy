@@ -1,4 +1,5 @@
 require 'uri'
+require 'CGI'
 
 class EmailsController < ApplicationController
 
@@ -54,7 +55,7 @@ class EmailsController < ApplicationController
     #  }
     #})
 
-    mailto = 'mailto:comments-ppsai-initial-05may15@icann.org?cc=policy-staff@icann.org&subject=' << subject << '&body=' << URI.encode(params[:body])
+    mailto = URI.escape('mailto:comments-ppsai-initial-05may15@icann.org?cc=policy-staff@icann.org&subject=' << subject << '&body=' << params[:body])
 
     redirect_to root_path, notice: mailto
   end
