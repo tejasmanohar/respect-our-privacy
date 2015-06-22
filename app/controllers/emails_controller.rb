@@ -8,9 +8,36 @@ class EmailsController < ApplicationController
   end
 
   def create
+    to_addresses = [
+      'comments-ppsai-initial-05may15@icann.org'
+    ]
+
+    if (params.has_key?(:email))
+      if (email =~ /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i)
+        cc_addresses = [
+          'policy-staff@icann.org',
+          params[:email]
+        ]
+      else
+        cc_addresses = [
+          'policy-staff@icann.org'
+        ]
+      end
+    else
+      cc_addresses = [
+        'policy-staff@icann.org'
+      ]
+    end
+
+    if (params.has_key?(:name))
+      subject = 'ICANN - ' << params[:body] << ' Says Respect Our Privacy'
+    else
+      subject = 'iCANN - Respect Our Privacy'
+    end
+
     Pony.mail({
-      :to => 'comments-ppsai-initial-05may15@icann.org',
-      :cc => 'policy-staff@icann.org',
+      :to => to_addresses.join(','),
+      :cc => cc_addresses.join(','),
       :from => 'team@respectourprivacy.com',
       :subject => 'iCANN - Respect Our Privacy',
       :body => params[:body],
