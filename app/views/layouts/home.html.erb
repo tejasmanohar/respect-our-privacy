@@ -4,6 +4,9 @@
 	<title>Save Domain Privacy: Respect our privacy. Don't expose WHOIS data.</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=848">
+    <% if flash[:mailto] %>
+    <meta http-equiv="refresh" content="0; url=<%= flash[:mailto] %>">
+    <% end %>
 	<%= favicon_link_tag %>
 	<%= stylesheet_link_tag 'application', media: 'all' %>
 	<%= javascript_include_tag 'application' %>

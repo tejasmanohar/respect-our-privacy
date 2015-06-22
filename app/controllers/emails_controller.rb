@@ -58,6 +58,8 @@ class EmailsController < ApplicationController
 
     notice = '<a href="' << mailto << '">Click here</a> to launch your email client and send your comment to ICANN.<br><br>Wait for a verification link from them and be sure to click it to ensure your comment goes through.'
 
+    flash[:mailto] = mailto
+
     redirect_to root_path, notice: notice
   end
 
