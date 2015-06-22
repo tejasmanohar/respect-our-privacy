@@ -1,7 +1,13 @@
 <div id="header">
 		<div class="inner">
 			<% if notice %>
-        <div class="notice"><%=raw notice %></div>
+            <div class="notice">
+                <% if flash[:mailto] %>
+                <%=raw notice.gsub '_mailto_', flash[:mailto] %>
+                <% else %>
+                <%=raw notice %>
+                <% end %>
+            </div>
 			<% end %>
 		<h2>Save Domain Privacy</h2>
 		<h3>Tell ICANN: "Respect our privacy. Don't expose WHOIS data."</h3>
@@ -84,3 +90,5 @@ Private information should be kept private. Thank you.</textarea>
 			<p class="small inner">* Who is ICANN? The Internet Corporation for Assigned Names and Numbers. They coordinate everything related to domains. Read more about their <a href="https://www.icann.org/get-started" target="_blank">mission and goals here</a>.</p>
 		</div>
 	</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.min.js"></script>

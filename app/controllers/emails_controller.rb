@@ -56,7 +56,9 @@ class EmailsController < ApplicationController
 
     mailto = 'mailto:comments-ppsai-initial-05may15@icann.org?cc=policy-staff@icann.org&subject=' << subject << '&body=' << URI.encode(params[:body])
 
-    notice = '<a href="' << mailto << '">Click here</a> to launch your email client and send your comment to ICANN.<br><br>Wait for a verification link from them and be sure to click it to ensure your comment goes through.'
+    notice = '<a href="_mailto_">Click here</a> to launch your email client and send your comment to ICANN.<br><br>' <<
+      'Wait for a verification link from them and be sure to click it to ensure your comment goes through.<br><br>' <<
+      'Alternatively, you can manually send the email to "comments-ppsai-initial-05may15@icann.org” and copy the body of our email by clicking <a href="#" class="copy">here</a>.'
 
     flash[:mailto] = mailto
 
