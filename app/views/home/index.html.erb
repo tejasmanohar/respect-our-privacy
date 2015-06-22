@@ -1,7 +1,11 @@
 <div id="header">
 		<div class="inner">
-			<% if notice %>
-        <div class="notice">To send this email, please click this <a href="<%= notice %>">link</a> to send it from your email client.</div>
+      <% if notice %>
+        <div class="notice">
+          If your email client didn't load, you can copy the contents of your email by clicking <a href="<%= notice %>">link</a>!<br /><br />
+
+          If you sent your comment to ICANN, awesome! Wait for a verification link from them and be sure to click it to ensure your comment goes through.
+        </div>
 			<% end %>
 		<h2>Save Domain Privacy</h2>
 		<h3>Tell ICANN: "Respect our privacy. Don't expose WHOIS data."</h3>
