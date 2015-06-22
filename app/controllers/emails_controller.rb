@@ -56,7 +56,7 @@ class EmailsController < ApplicationController
 
     mailto = 'mailto:comments-ppsai-initial-05may15@icann.org?cc=policy-staff@icann.org&subject=' << subject << '&body=' << URI.encode(params[:body])
 
-    redirect_to root_path, notice: mailto
+    redirect_to root_path, email: mailto
   end
 
 end

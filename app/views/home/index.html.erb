@@ -1,7 +1,10 @@
 <div id="header">
 		<div class="inner">
-			<% if notice %>
-        <div class="notice">To send this email, please click this <a href="<%= notice %>">link</a> to send it from your email client.</div>
+      <% if email %>
+        <div class="notice">To send this email, please click this <a href="<%= email %>">link</a> to send it from your email client.</div>
+      <% end %>
+      <% if notice %>
+        <%= notice %>
 			<% end %>
 		<h2>Save Domain Privacy</h2>
 		<h3>Tell ICANN: "Respect our privacy. Don't expose WHOIS data."</h3>
