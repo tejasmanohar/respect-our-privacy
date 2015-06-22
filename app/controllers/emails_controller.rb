@@ -13,7 +13,7 @@ class EmailsController < ApplicationController
     ]
 
     if (params.has_key?(:email))
-      if (email =~ /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i)
+      if (params[:email] =~ /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i)
         cc_addresses = [
           'policy-staff@icann.org',
           params[:email]
@@ -30,7 +30,7 @@ class EmailsController < ApplicationController
     end
 
     if (params.has_key?(:name))
-      subject = 'ICANN - ' << params[:body] << ' Says Respect Our Privacy'
+      subject = 'ICANN - ' << params[:name] << ' Says Respect Our Privacy'
     else
       subject = 'iCANN - Respect Our Privacy'
     end
@@ -39,7 +39,7 @@ class EmailsController < ApplicationController
       :to => to_addresses.join(','),
       :cc => cc_addresses.join(','),
       :from => 'team@respectourprivacy.com',
-      :subject => 'iCANN - Respect Our Privacy',
+      :subject => subject,
       :body => params[:body],
       :via => :smtp,
       :via_options => {
