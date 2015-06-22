@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+vendor/bundle
+/vendor/bundle
+test.sh
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
