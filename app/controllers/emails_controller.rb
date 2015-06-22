@@ -1,3 +1,5 @@
+require 'uri'
+
 class EmailsController < ApplicationController
 
   def new
@@ -35,23 +37,26 @@ class EmailsController < ApplicationController
       subject = 'iCANN - Respect Our Privacy'
     end
 
-    Pony.mail({
-      :to => to_addresses.join(','),
-      :cc => cc_addresses.join(','),
-      :from => 'team@respectourprivacy.com',
-      :subject => subject,
-      :body => params[:body],
-      :via => :smtp,
-      :via_options => {
-        :address        => ENV['SMTP_ADDRESS'],
-        :port           => ENV['SMTP_PORT'],
-        :user_name      => ENV['SMTP_USER'],
-        :password       => ENV['SMTP_PASS'],
-        :authentication => :plain,
-        :domain         => "respectourprivacy.com"
-      }
-    })
-    redirect_to root_path, notice: "Your email sent successfully."
+    #Pony.mail({
+    #  :to => to_addresses.join(','),
+    #  :cc => cc_addresses.join(','),
+    #  :from => 'team@respectourprivacy.com',
+    #  :subject => subject,
+    #  :body => params[:body],
+    #  :via => :smtp,
+    #  :via_options => {
+    #    :address        => ENV['SMTP_ADDRESS'],
+    #    :port           => ENV['SMTP_PORT'],
+    #    :user_name      => ENV['SMTP_USER'],
+    #    :password       => ENV['SMTP_PASS'],
+    #    :authentication => :plain,
+    #    :domain         => "respectourprivacy.com"
+    #  }
+    #})
+
+    mailto = 'mailto:comments-ppsai-initial-05may15@icann.org?cc=policy-staff@icann.org&subject=' << subject << '&body=' << URI.encode(params[:body])
+
+    redirect_to root_path, notice: mailto
   end
 
 end
