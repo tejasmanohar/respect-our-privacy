@@ -20,7 +20,7 @@ class PhonesController < ApplicationController
       url: "#{ENV['DOMAIN']}/phones/voice"
     )
 
-    redirect_to root_path(next: "email"), notice: "We’ll call you shortly and connect you with the ICANN office. Please also submit an email comment to ICANN using the form below. Doing both of these things will ensure your voice is heard!"
+    redirect_to root_path(next: "email"), notice: "We’ll call you shortly and connect you with the ICANN office. Please also submit an email comment to ICANN using the form below. Doing both of these things will ensure your voice is heard! If for some reason, your call wasn’t connected, you can call ICANN’s LA office directly here:  +1 310 301 5800."
   end
 
   def voice
