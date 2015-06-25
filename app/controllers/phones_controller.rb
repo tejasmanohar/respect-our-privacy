@@ -13,12 +13,17 @@ class PhonesController < ApplicationController
   def create
     number = params[:number].tr('^0-9', '')
 
-    @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
-    @call = @client.calls.create(
-      from: ENV['TWILIO_NUMBER'],
-      to: number,
-      url: "#{ENV['DOMAIN']}/phones/voice"
-    )
+    begin
+      @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+      @call = @client.calls.create(
+        from: ENV['TWILIO_NUMBER'],
+        to: number,
+        url: "#{ENV['DOMAIN']}/phones/voice"
+      )
+
+    rescue
+      return redirect_to root_path, notice: 'phone_error'
+    end
 
     redirect_to root_path(next: "email"), notice: 'phone'
   end
