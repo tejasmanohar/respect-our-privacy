@@ -54,6 +54,8 @@ class EmailsController < ApplicationController
     #  }
     #})
 
+    flash[:body] = URI.encode(params[:body])
+
     redirect_to root_path, notice: 'email'
   end
 
