@@ -18,7 +18,7 @@ class PhonesController < ApplicationController
       @call = @client.calls.create(
         from: ENV['TWILIO_NUMBER'],
         to: number,
-        url: "#{ENV['DOMAIN']}/phones/voice"
+        url: "https://s3.amazonaws.com/respect-our-privacy/voice.xml"
       )
 
     rescue
